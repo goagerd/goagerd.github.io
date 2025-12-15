@@ -63,13 +63,14 @@ section {
 }
 
 .profile-img {
-    width: 500px;
-    height: 500px;
-    border-radius: 100%;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
     border: 5px solid white;
     margin-bottom: 1.5rem;
-    object-fit: cover;
+    object-fit: contain;
     background: #f0f0f0;
+    padding: 10px;
 }
 
 h1 {
