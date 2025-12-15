@@ -1,71 +1,308 @@
-I am a statistician and mathematician with research interests in Bayesian
-inference, longitudinal and survival data analysis, mathematical
-epidemiology, and network-based disease surveillance.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerald Ohene Agyekum - Academic Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-I am currently completing an M.S. in Mathematics at Tarleton State University
-(GPA: 4.00), where my research focuses on network-based and network-free
-surveillance strategies for infectious disease modeling. My work combines
-stochastic epidemic modeling, Bayesian inference, and large-scale network
-simulations to study early outbreak detection and optimal surveillance
-design.
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
 
-My broader interests include disease progression modeling, survival
-analysis, and the application of statistical and mathematical methods to
-public health problems, particularly in maternal and child health.
+        nav {
+            background: #2c3e50;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
 
-_pages/publications.md
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
 
----
-layout: page
-title: Publications
-permalink: /publications/
----
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-### Peer-Reviewed Publications
+        nav a:hover {
+            color: #3498db;
+        }
 
-- **Agyekum, G. O.**, Ofori, M. F., Ofori, M. A., & Adarkwa, S. A. (2025).
-  *Time-homogeneous Markov modeling of HIV progression in patients receiving
-  antiretroviral therapy in the Ashanti Region, Ghana.*
-  **Canadian Journal of Infectious Diseases and Medical Microbiology**.
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-- Adu, I. K., Wireko, F. A., Adarkwa, S. A., & **Agyekum, G. O.** (2024).
-  *Mathematical analysis of Ebola considering transmission at treatment
-  centres and survivor relapse using fractal-fractional Caputo derivatives
-  in Uganda.*
-  **Mathematical Modelling and Numerical Simulation with Applications**, 4(3),
-  296–334.
+        section {
+            background: white;
+            margin: 2rem auto;
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
 
-- **Agyekum, G. O.**, Ofori, M. O., Adarkwa, S. A., & Ofori, M. A. (2024).
-  *A cross-sectional study on the occurrence of maternal mortality in selected
-  hospitals in the Kumasi Metropolis using zero-inflated negative binomial
-  models.*
-  **Journal of Probability and Statistics**.
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: 0;
+            border-radius: 0;
+        }
 
-- **Agyekum, G. O.**, Adarkwa, S. A., & Kusi, R. Y. (2023).
-  *Impact of sample size on multicollinearity in high-dimensional logistic
-  regression analysis.*
-  **International Journal of Innovation and Development**, 1(3).
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+            background: #f0f0f0;
+        }
 
----
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
 
-### Manuscripts Under Review and In Progress
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #3498db;
+        }
 
-- **Agyekum, G. O.**, Mitchell, C., & Ansong, S.
-  *Mathematical analysis of TB–COVID-19 co-infection: invasion reproduction
-  numbers, competitive dynamics, and control strategies.*
-  Under review at **Scientific Reports**.
+        h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
 
-- **Agyekum, G. O.**, Ofori, M. F., Ofori, M. A., & Ismail, A.
-  *A comprehensive analysis of social determinants and clinical predictors
-  of tuberculosis treatment success.*
-  Under review at **Health & Social Care in the Community**.
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
 
-- Ofori, M. F., **Agyekum, G. O.**, Kyerewaa, M., Tettey, F. O., & Ofori, M. A.
-  *Socio-economic and dietary determinants of maternal malnutrition in Ghana.*
-  Under review at **Maternal & Child Nutrition**.
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
 
-- **Agyekum, G. O.**, Adarkwa, S. A., Owusu, F. K., & Kusi, R. Y.
-  *Comparative analysis of machine learning approaches for breast cancer
-  detection utilizing PCA and UMAP.*
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
 
-_pages/research.md
+        .contact-links a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .publication {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .publication:last-child {
+            border-bottom: none;
+        }
+
+        .pub-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.3rem;
+        }
+
+        .pub-authors {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 0.3rem;
+        }
+
+        .pub-venue {
+            color: #3498db;
+            font-weight: 500;
+        }
+
+        .research-area {
+            background: #e8f4f8;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+        }
+
+        .teaching-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .course-title {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .award-item {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .award-item:before {
+            content: "🏆";
+            position: absolute;
+            left: 0;
+        }
+
+        .education-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .degree {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+
+        .institution {
+            color: #666;
+            margin-top: 0.3rem;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <img src="profile-photo.jpg" alt="Gerald Ohene Agyekum" class="profile-img">
+            <h1>Gerald Ohene Agyekum</h1>
+            <p class="subtitle">Graduate Student in Mathematics</p>
+            <p>Tarleton State University | Department of Mathematics</p>
+            <div class="contact-links">
+                <a href="mailto:geraldagyekum45@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/gerald-ohene-agyekum/" target="_blank">LinkedIn</a>
+                <a href="CV.pdf" target="_blank">Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Welcome! I am a graduate student pursuing a Master of Science in Mathematics at Tarleton State University, with an expected graduation in May 2026. I specialize in longitudinal and survival data analysis, Bayesian inference, mathematical epidemiology, and network analysis.</p>
+            <p style="margin-top: 1rem;">I earned my Bachelor of Technology in Health Statistics with First Class Honors from Kumasi Technical University, Ghana, where I graduated with a GPA of 3.89/4.00. My undergraduate studies included an exchange program at Sivas Cumhuriyet University, Turkey, through the prestigious Erasmus Mundus Exchange Program.</p>
+            <p style="margin-top: 1rem;">My research focuses on the intersection of biostatistics and public health, with particular expertise in infectious disease modeling and interdisciplinary public health research. I am proficient in Python, R, MATLAB, and LaTeX, and I am passionate about applying advanced mathematical and statistical methods to solve real-world health challenges.</p>
+            
+            <h3 style="margin-top: 2rem;">Education</h3>
+            <div class="education-item">
+                <div class="degree">Master of Science in Mathematics</div>
+                <div class="institution">Tarleton State University, Texas (Aug 2024 - May 2026, Expected) | GPA: 4.00/4.00</div>
+            </div>
+            <div class="education-item">
+                <div class="degree">Bachelor of Technology in Health Statistics</div>
+                <div class="institution">Kumasi Technical University, Ghana (Sept 2019 - Aug 2023) | GPA: 3.89/4.00 | First Class Honors</div>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Research Interests</h2>
+            <p>My research spans multiple areas at the intersection of mathematics, statistics, and public health:</p>
+            <div class="research-area">
+                <h3>Longitudinal & Survival Data Analysis</h3>
+                <p>Developing advanced statistical models for analyzing time-to-event data and repeated measurements in health research.</p>
+            </div>
+            <div class="research-area">
+                <h3>Bayesian Inference & Mathematical Epidemiology</h3>
+                <p>Applying Bayesian methods and mathematical modeling to understand and predict disease transmission dynamics.</p>
+            </div>
+            <div class="research-area">
+                <h3>Network Analysis & Disease Surveillance</h3>
+                <p>Investigating network-based and network-free surveillance strategies for epidemic monitoring and control.</p>
+            </div>
+            <div class="research-area">
+                <h3>Machine Learning in Healthcare</h3>
+                <p>Utilizing machine learning approaches for disease detection, prediction, and improving health outcomes.</p>
+            </div>
+            <div class="research-area">
+                <h3>Maternal & Child Health</h3>
+                <p>Statistical modeling of maternal mortality, malnutrition, and other critical health issues affecting women and children.</p>
+            </div>
+
+            <h3 style="margin-top: 2.5rem;">Current Research Projects</h3>
+            <p style="margin-top: 1rem;"><strong>Network-based and Network-free Surveillance Strategies</strong> (Aug 2025 - Present)<br>
+            Advisor: Dr. Jose Herrera Diestra | Developing Bayesian surveillance strategies by simulating SEIR epidemic models across 10,000-node networks.</p>
+            
+            <p style="margin-top: 1rem;"><strong>Mathematical Analysis of TB–COVID-19 Co-Infection</strong> (Feb 2025 - Present)<br>
+            Advisor: Dr. Christopher Mitchell | Formulating nonlinear differential equations capturing TB–COVID-19 coinfection dynamics, invasion reproduction numbers, and control strategies.</p>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            
+            <h3>Published Articles</h3>
+            <div class="publication">
+                <div class="pub-title">Time-Homogeneous Markov Modeling of HIV Progression in Patients Receiving Antiretroviral Therapy Treatment in the Ashanti Region, Ghana</div>
+                <div class="pub-authors">Ofori, M. F., Agyekum, G. O., Ofori, M. A., Adarkwa, S. A.</div>
+                <div class="pub-venue">Canadian Journal of Infectious Diseases and Medical Microbiology, 2025</div>
+            </div>
+            
+            <div class="publication">
+                <div class="pub-title">Mathematical Analysis of Ebola Considering Transmission at Treatment Centres and Survivor Relapse Using Fractal-
