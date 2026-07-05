@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gerald Ohene Agyekum — PhD Candidate in Statistical and Computer Sciences at the University of Rhode Island">
+    <title>Gerald Ohene Agyekum</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #fdfdfd;
+            --text: #2c2c2c;
+            --text-light: #666;
+            --accent: #8b5e3c;
+            --border: #e8e4e0;
+            --card-bg: #faf8f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(253,253,253,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 0 40px;
+        }
+
+        .nav-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .nav-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 0.8em;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Main layout */
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 100px 40px 60px;
+        }
+
+        /* Hero */
+        .hero {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            padding: 60px 0 80px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-image img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            filter: grayscale(20%);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.06);
+        }
+
+        .hero-text h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3em;
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+
+        .hero-text .role {
+            font-size: 1.1em;
+            color: var(--text-light);
+            font-weight: 300;
+            margin-bottom: 4px;
+        }
+
+        .hero-text .school {
+            font-size: 0.95em;
+            color: var(--accent);
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .hero-links {
+            display: flex;
+            gap: 18px;
+            margin-top: 22px;
+            flex-wrap: wrap;
+        }
+
+        .hero-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.85em;
+            transition: color 0.3s;
+        }
+
+        .hero-links a:hover { color: var(--accent); }
+
+        .hero-links .separator {
+            color: var(--border);
+        }
+
+        /* Sections */
+        .section {
+            padding: 70px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section:last-of-type { border-bottom: none; }
+
+        .section-label {
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent);
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: var(--text);
+        }
+
+        .section p {
+            color: var(--text-light);
+            font-size: 1.05em;
+            line-height: 1.8;
+            max-width: 650px;
+        }
+
+        /* Research cards */
+        .research-grid {
+            display: grid;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .research-card {
+            padding: 25px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .research-card:last-child { border-bottom: none; }
+
+        .research-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .research-card .meta {
+            font-size: 0.8em;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .research-card p {
+            font-size: 0.95em;
+            color: var(--text-light);
+        }
+
+        /* Publications */
+        .pub-item {
+            padding: 22px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pub-item:last-child { border-bottom: none; }
+
+        .pub-item h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15em;
+            font-weight: 600;
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+
+        .pub-item .authors {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.9em;
+        }
+
+        .pub-item .venue {
+            color: var(--accent);
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .pub-link {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 0.8em;
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .pub-link:hover { border-bottom-color: var(--accent); }
+
+        /* News */
+        .news-list {
+            list-style: none;
+        }
+
+        .news-list li {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            gap: 25px;
+        }
+
+        .news-list li:last-child { border-bottom: none; }
+
+        .news-date {
+            font-size: 0.75em;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            min-width: 80px;
+            padding-top: 3px;
+        }
+
+        .news-text {
+            font-size: 0.95em;
+            color: var(--text-light);
+        }
+
+        .news-text strong {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        /* Contact */
+        .contact-line {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-line a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.95em;
+            transition: color 0.3s;
+        }
+
+        .contact-line a:hover { color: var(--accent); }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 50px 40px;
+            color: var(--text-light);
+            font-size: 0.85em;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+            .hero-links { justify-content: center; }
+            .hero-text h1 { font-size: 2.2em; }
+            .nav-links { gap: 18px; }
+            .nav-links a { font-size: 0.7em; letter-spacing: 1px; }
+            nav { padding: 0 20px; }
+            .page { padding: 80px 20px 40px; }
+            .news-list li { flex-direction: column; gap: 4px; }
+        }
+
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav>
+        <div class="nav-inner">
+            <a href="#" class="nav-name">Gerald Agyekum</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#writing">Writing</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="page">
+
+        <!-- ===== HERO ===== -->
+        <section class="hero" id="about">
+            <div class="hero-image">
+                <img src="images/profile.jpg" alt="Gerald Ohene Agyekum">
+            </div>
+            <div class="hero-text">
+                <h1>Gerald Ohene Agyekum</h1>
+                <p class="role">PhD Candidate in Statistical & Computer Sciences</p>
+                <p class="school">University of Rhode Island</p>
+                <div class="hero-links">
+                    <a href="mailto:gerald.agyekum@uri.edu">Email</a>
+                    <span class="separator">·</span>
+                    <a href="https://scholar.google.com/citations?user=7kcgRUUAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                    <span class="separator">·</span>
+                    <a href="https://orcid.org/0009-0006-7152-0582" target="_blank">ORCID</a>
+                    <span class="separator">·</span>
+                    <a href="https://github.com/goagerd" target="_blank">GitHub</a>
+                    <span class="separator">·</span>
+                    <a href="https://linkedin.com/in/gerald-ohene-agyekum" target="_blank">LinkedIn</a>
+                    <span class="separator">·</span>
+                    <a href="files/cv.pdf" target="_blank">CV</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT ===== -->
+        <section class="section">
+            <p class="section-label">About</p>
+            <p>
+                I develop adaptive infectious disease surveillance systems that integrate 
+                Electronic Health Records, network structures, and Bayesian inference to improve 
+                early outbreak detection and strengthen pandemic preparedness. My work sits at 
+                the intersection of statistical modeling, machine learning, and public health.
+            </p>
+            <p style="margin-top: 15px;">
+                I hold an MS in Mathematics from Tarleton State University (4.00 GPA) and a 
+                BTech in Health Statistics from Kumasi Technical University (First Class Honors). 
+                Starting August 2026, I will begin my PhD in Computer and Statistical Sciences 
+                at the University of Rhode Island.
+            </p>
+        </section>
+
+        <!-- ===== RESEARCH ===== -->
+        <section class="section" id="research">
+            <p class="section-label">Research</p>
+            <div class="research-grid">
+                
+                <div class="research-card">
+                    <h3>Synergistic Disease Surveillance</h3>
+                    <p class="meta">with Dr. Jose Herrera Diestra · 2025–Present</p>
+                    <p>Integrating network-based and network-free surveillance strategies with Bayesian mixing for early outbreak detection using EHR data.</p>
+                </div>
+
+                <div class="research-card">
+                    <h3>Network-Informed Bayesian Epidemic Monitoring</h3>
+                    <p class="meta">with Dr. Scott Cook · 2025</p>
+                    <p>Built a BayesFlow framework achieving posterior inference in under 1 second across 50,000 simulations, with 90.6% network coverage while monitoring only 1% of the population.</p>
+                </div>
+
+                <div class="research-card">
+                    <h3>TB–COVID-19 Co-Infection Dynamics</h3>
+                    <p class="meta">with Dr. Christopher Mitchell · 2025–Present</p>
+                    <p>Formulated 11 nonlinear differential equations modeling coinfection dynamics, invasion reproduction numbers, and control strategies. Under review at <em>Scientific Reports</em>.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== SELECTED WRITING ===== -->
+        <section class="section" id="writing">
+            <p class="section-label">Selected Writing</p>
+            
+            <div class="pub-item">
+                <h3>Assessing Awareness and Risk Factors of Cervical Cancer Among Female Students</h3>
+                <p class="authors">Ofori, M.F., Antwi, R., Agyekum, G.O., & Ofori, M.A.</p>
+                <p class="venue">Clinical Epidemiology and Global Health, 2026</p>
+            </div>
+
+            <div class="pub-item">
+                <h3>Time-Homogeneous Markov Modeling of HIV Progression</h3>
+                <p class="authors">Ofori, M.F., Agyekum, G.O., Ofori, M.A., & Adarkwa, S.A.</p>
+                <p class="venue">Canadian Journal of Infectious Diseases and Medical Microbiology, 2025</p>
+            </div>
+
+            <div class="pub-item">
+                <h3>Mathematical Analysis of Ebola Using Fractal-Fractional Caputo Derivatives</h3>
+                <p class="authors">Adu, I.K., Wireko, F.A., Adarkwa, S.A., & Agyekum, G.O.</p>
+                <p class="venue">Mathematical Modelling and Numerical Simulation with Applications, 2024</p>
+            </div>
+
+            <div class="pub-item">
+                <h3>Maternal Mortality in Kumasi Metropolis Using Zero-Inflated Negative Binomial</h3>
+                <p class="authors">Agyekum, G.O., Ofori, M.O., Adarkwa, S.A., & Ofori, M.A.</p>
+                <p class="venue">Journal of Probability and Statistics, 2024</p>
+            </div>
+
+            <a href="https://scholar.google.com/citations?user=7kcgRUUAAAAJ&hl=en" target="_blank" class="pub-link" style="margin-top: 20px;">View all on Google Scholar →</a>
+        </section>
+
+        <!-- ===== NEWS ===== -->
+        <section class="section" id="news">
+            <p class="section-label">Recent</p>
+            <ul class="news-list">
+                <li>
+                    <span class="news-date">Mar 2026</span>
+                    <span class="news-text"><strong>MAA Conference, Baylor University</strong> — Presented on synergistic infectious disease surveillance using EHR data and network structure.</span>
+                </li>
+                <li>
+                    <span class="news-date">Mar 2025</span>
+                    <span class="news-text"><strong>MAA Conference, Prairie View A&M</strong> — Presented Markov modeling of HIV progression in Ghana.</span>
+                </li>
+                <li>
+                    <span class="news-date">Aug 2025</span>
+                    <span class="news-text"><strong>Davidson Presidential Scholarship</strong> — Awarded by Tarleton State University.</span>
+                </li>
+                <li>
+                    <span class="news-date">Jan 2024</span>
+                    <span class="news-text"><strong>Best Graduating Student</strong> — Faculty of Applied Sciences and Technology, Kumasi Technical University.</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section class="section" id="contact">
+            <p class="section-label">Contact</p>
+            <p style="margin-bottom: 20px;">
+                I'm always happy to connect with fellow researchers. 
+                The best way to reach me is by email.
+            </p>
+            <div class="contact-line">
+                <a href="mailto:gerald.agyekum@uri.edu">gerald.agyekum@uri.edu</a>
+                <a href="https://scholar.google.com/citations?user=7kcgRUUAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                <a href="https://orcid.org/0009-0006-7152-0582" target="_blank">ORCID</a>
+                <a href="https://github.com/goagerd" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/gerald-ohene-agyekum" target="_blank">LinkedIn</a>
+                <a href="files/cv.pdf" target="_blank">Download CV</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>Gerald Ohene Agyekum · University of Rhode Island · 2026</p>
+    </footer>
+
+</body>
+</html>
