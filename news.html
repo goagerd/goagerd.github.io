@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="News — Gerald Ohene Agyekum">
+    <title>News — Gerald Ohene Agyekum</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #fdfdfd;
+            --text: #2c2c2c;
+            --text-light: #666;
+            --accent: #8b5e3c;
+            --border: #e8e4e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(253,253,253,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 0 40px;
+        }
+
+        .nav-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .nav-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 0.8em;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--accent); }
+        .nav-links a.active { color: var(--accent); }
+
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 100px 40px 60px;
+        }
+
+        .page-header {
+            padding: 40px 0 60px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 50px;
+        }
+
+        .page-header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8em;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        .news-list {
+            list-style: none;
+        }
+
+        .news-list li {
+            padding: 22px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            gap: 30px;
+        }
+
+        .news-list li:last-child { border-bottom: none; }
+
+        .news-date {
+            font-size: 0.75em;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            min-width: 85px;
+            padding-top: 3px;
+        }
+
+        .news-text {
+            font-size: 0.95em;
+            color: var(--text-light);
+        }
+
+        .news-text strong {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 40px;
+            color: var(--text-light);
+            font-size: 0.85em;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 700px) {
+            .page-header h1 { font-size: 2.2em; }
+            .nav-links { gap: 18px; }
+            .nav-links a { font-size: 0.7em; letter-spacing: 1px; }
+            nav { padding: 0 20px; }
+            .page { padding: 80px 20px 40px; }
+            .news-list li { flex-direction: column; gap: 4px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Gerald Agyekum</a>
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page">
+
+        <div class="page-header">
+            <h1>News</h1>
+        </div>
+
+        <ul class="news-list">
+            <li>
+                <span class="news-date">Mar 2026</span>
+                <span class="news-text"><strong>105th MAA Conference, Baylor University</strong> — Presented "Toward a Synergistic Infectious Disease Surveillance Using EHR Data and Network Structure."</span>
+            </li>
+            <li>
+                <span class="news-date">Mar 2025</span>
+                <span class="news-text"><strong>104th MAA Conference, Prairie View A&M University</strong> — Presented "Time-Homogeneous Markov Modeling of HIV Progression in the Ashanti Region, Ghana."</span>
+            </li>
+            <li>
+                <span class="news-date">Aug 2025</span>
+                <span class="news-text"><strong>Davidson Presidential Scholarship</strong> — Awarded by Tarleton State University for academic excellence.</span>
+            </li>
+            <li>
+                <span class="news-date">2024–2026</span>
+                <span class="news-text"><strong>President's List</strong> — Tarleton State University, four consecutive semesters.</span>
+            </li>
+            <li>
+                <span class="news-date">Jan 2024</span>
+                <span class="news-text"><strong>Best Graduating Student</strong> — Faculty of Applied Sciences and Technology, and Department of Statistical Sciences, Kumasi Technical University.</span>
+            </li>
+            <li>
+                <span class="news-date">Nov 2023</span>
+                <span class="news-text"><strong>Statistical Knowledge Contest Winner</strong> — Ghana Statistical Service.</span>
+            </li>
+            <li>
+                <span class="news-date">Mar 2023</span>
+                <span class="news-text"><strong>7th International Conference on Applied Sciences and Technology</strong> — Presented on multicollinearity in high-dimensional logistic regression.</span>
+            </li>
+            <li>
+                <span class="news-date">Oct 2021</span>
+                <span class="news-text"><strong>Erasmus Mundus Exchange Program</strong> — Studied at Sivas Cumhuriyet University, Turkey.</span>
+            </li>
+        </ul>
+
+    </div>
+
+    <footer>
+        <p>Gerald Ohene Agyekum · University of Rhode Island · 2026</p>
+    </footer>
+
+</body>
+</html>
