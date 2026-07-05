@@ -1,1 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Research — Gerald Ohene Agyekum">
+    <title>Research — Gerald Ohene Agyekum</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #fdfdfd;
+            --text: #2c2c2c;
+            --text-light: #666;
+            --accent: #8b5e3c;
+            --border: #e8e4e0;
+        }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(253,253,253,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 0 40px;
+        }
+
+        .nav-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .nav-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 0.8em;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--accent); }
+        .nav-links a.active { color: var(--accent); }
+
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 100px 40px 60px;
+        }
+
+        .page-header {
+            padding: 40px 0 60px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 50px;
+        }
+
+        .page-header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8em;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: var(--text-light);
+            font-size: 1.05em;
+            max-width: 600px;
+        }
+
+        .research-card {
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .research-card:last-child { border-bottom: none; }
+
+        .research-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .research-card .meta {
+            font-size: 0.8em;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .research-card p {
+            font-size: 0.95em;
+            color: var(--text-light);
+            max-width: 650px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 40px;
+            color: var(--text-light);
+            font-size: 0.85em;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 700px) {
+            .page-header h1 { font-size: 2.2em; }
+            .nav-links { gap: 18px; }
+            .nav-links a { font-size: 0.7em; letter-spacing: 1px; }
+            nav { padding: 0 20px; }
+            .page { padding: 80px 20px 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Gerald Agyekum</a>
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="research.html" class="active">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page">
+
+        <div class="page-header">
+            <h1>Research</h1>
+            <p>Developing adaptive infectious disease surveillance systems at the intersection of statistics, machine learning, and public health.</p>
+        </div>
+
+        <div class="research-card">
+            <h3>Synergistic Disease Surveillance Using EHR Data & Network Structure</h3>
+            <p class="meta">with Dr. Jose Herrera Diestra · Tarleton State University · 2025–Present</p>
+            <p>Developing a synergistic approach for early disease surveillance using network-based and network-free surveillance strategies. Incorporating a Bayesian approach to dynamically adjust the mixing parameter as the population structure changes.</p>
+        </div>
+
+        <div class="research-card">
+            <h3>Network-Informed Bayesian Surveillance for Epidemic Monitoring</h3>
+            <p class="meta">with Dr. Scott Cook · Tarleton State University · 2025</p>
+            <p>Developed a Bayesian Deep Learning framework (BayesFlow) integrating network science and simulation-based inference for epidemic surveillance. Achieved amortized posterior inference in under 1 second across 50,000 pre-trained simulations — vastly outperforming traditional MCMC. Engineered network-informed priors that attained 90.6% network coverage while monitoring only 1% of the population, a 2x efficiency gain. Simulation-Based Calibration confirmed 95% credible intervals achieved 93–94% coverage across 500 independent runs.</p>
+        </div>
+
+        <div class="research-card">
+            <h3>Mathematical Analysis of TB–COVID-19 Co-Infection Dynamics</h3>
+            <p class="meta">with Dr. Christopher Mitchell · Tarleton State University · 2025–Present</p>
+            <p>Formulated a system of 11 nonlinear differential equations capturing TB–COVID-19 coinfection dynamics, invasion reproduction numbers, competitive dynamics, and control strategies. Under review at <em>Scientific Reports</em>.</p>
+        </div>
+
+        <div class="research-card">
+            <h3>Predicting Diabetic Retinopathy Using Machine Learning</h3>
+            <p class="meta">with Dr. Scott Cook · Tarleton State University · 2025</p>
+            <p>Utilized AutoFLAML to identify optimal algorithms for diabetic retinopathy prediction from clinical data.</p>
+        </div>
+
+        <div class="research-card">
+            <h3>Predictive Modeling of Breast Volume Using Anthropometric Measurements</h3>
+            <p class="meta">with Dr. Jesse Crawford · Tarleton State University · 2024</p>
+            <p>Developed regression-based predictive models (stepwise and polynomial) for breast volume estimation using a comprehensive dataset collected in Ghana.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Gerald Ohene Agyekum · University of Rhode Island · 2026</p>
+    </footer>
+
+</body>
+</html>
