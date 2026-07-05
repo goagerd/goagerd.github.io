@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Publications — Gerald Ohene Agyekum">
+    <title>Publications — Gerald Ohene Agyekum</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #fdfdfd;
+            --text: #2c2c2c;
+            --text-light: #666;
+            --accent: #8b5e3c;
+            --border: #e8e4e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(253,253,253,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 0 40px;
+        }
+
+        .nav-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .nav-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 0.8em;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--accent); }
+        .nav-links a.active { color: var(--accent); }
+
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 100px 40px 60px;
+        }
+
+        .page-header {
+            padding: 40px 0 60px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 50px;
+        }
+
+        .page-header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8em;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: var(--text-light);
+            font-size: 1.05em;
+        }
+
+        .section-label {
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent);
+            margin: 50px 0 25px;
+            font-weight: 500;
+        }
+
+        .section-label:first-of-type { margin-top: 0; }
+
+        .pub-item {
+            padding: 22px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pub-item:last-child { border-bottom: none; }
+
+        .pub-item h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+
+        .pub-item .authors {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.9em;
+        }
+
+        .pub-item .venue {
+            color: var(--accent);
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .pub-link {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 0.85em;
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .pub-link:hover { border-bottom-color: var(--accent); }
+
+        footer {
+            text-align: center;
+            padding: 50px 40px;
+            color: var(--text-light);
+            font-size: 0.85em;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 700px) {
+            .page-header h1 { font-size: 2.2em; }
+            .nav-links { gap: 18px; }
+            .nav-links a { font-size: 0.7em; letter-spacing: 1px; }
+            nav { padding: 0 20px; }
+            .page { padding: 80px 20px 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Gerald Agyekum</a>
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html" class="active">Publications</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page">
+
+        <div class="page-header">
+            <h1>Publications</h1>
+            <p>Selected peer-reviewed publications and manuscripts in progress.</p>
+        </div>
+
+        <p class="section-label">Published</p>
+
+        <div class="pub-item">
+            <h3>Assessing the Awareness and Associated Risk Factors of Cervical Cancer Among Female Students in Kumasi Technical University, Ghana</h3>
+            <p class="authors">Ofori, M.F., Antwi, R., Agyekum, G.O., & Ofori, M.A.</p>
+            <p class="venue">Clinical Epidemiology and Global Health, 102391, 2026</p>
+        </div>
+
+        <div class="pub-item">
+            <h3>Time-Homogeneous Markov Modeling of HIV Progression in Patients Receiving Antiretroviral Therapy Treatment in the Ashanti Region, Ghana</h3>
+            <p class="authors">Ofori, M.F., Agyekum, G.O., Ofori, M.A., & Adarkwa, S.A.</p>
+            <p class="venue">Canadian Journal of Infectious Diseases and Medical Microbiology, 2025</p>
+        </div>
+
+        <div class="pub-item">
+            <h3>Mathematical Analysis of Ebola Considering Transmission at Treatment Centres and Survivor Relapse Using Fractal-Fractional Caputo Derivatives in Uganda</h3>
+            <p class="authors">Adu, I.K., Wireko, F.A., Adarkwa, S.A., & Agyekum, G.O.</p>
+            <p class="venue">Mathematical Modelling and Numerical Simulation with Applications, 4(3), 296–334, 2024</p>
+        </div>
+
+        <div class="pub-item">
+            <h3>A Cross-Sectional Study on the Occurrence of Maternal Mortality in Some Selected Hospitals in Kumasi Metropolis Using Zero-Inflated Negative Binomial</h3>
+            <p class="authors">Agyekum, G.O., Ofori, M.O., Adarkwa, S.A., & Ofori, M.A.</p>
+            <p class="venue">Journal of Probability and Statistics, 2024</p>
+        </div>
+
+        <div class="pub-item">
+            <h3>Impact of Sample Size on Multicollinearity with High Dimensional Data in Logistic Regression Analysis</h3>
+            <p class="authors">Agyekum, G.O., Adarkwa, S.A., & Kusi, R.Y.</p>
+            <p class="venue">International Journal of Innovation and Development, 1(3), 2023</p>
+        </div>
+
+        <p class="section-label">Under Review & In Progress</p>
+
+        <div class="pub-item">
+            <h3>Mathematical Analysis of TB–COVID-19 Co-Infection: Invasion Reproduction Numbers, Competitive Dynamics, and Control Strategies</h3>
+            <p class="authors">Agyekum, G.O., & Mitchell, C.</p>
+            <p class="venue">Under review at <em>Scientific Reports</em></p>
+        </div>
+
+        <div class="pub-item">
+            <h3>A Comprehensive Analysis of Social Determinants and Clinical Predictors of Tuberculosis Treatment Success: A 5-Year Retrospective Study from Ghana</h3>
+            <p class="authors">Agyekum, G.O., Ofori, M.F., Ofori, M.A., & Ismail, A.</p>
+            <p class="venue">Under review at <em>Health & Social Care in the Community</em></p>
+        </div>
+
+        <div class="pub-item">
+            <h3>Comparative Analysis of Machine Learning Approaches for Breast Cancer Detection Utilizing PCA and UMAP as Dimensionality Reduction Techniques</h3>
+            <p class="authors">Agyekum, G.O., Adarkwa, S.A., Owusu, F.K., & Kusi, R.Y.</p>
+            <p class="venue">In progress</p>
+        </div>
+
+        <a href="https://scholar.google.com/citations?user=7kcgRUUAAAAJ&hl=en" target="_blank" class="pub-link">View all on Google Scholar →</a>
+
+    </div>
+
+    <footer>
+        <p>Gerald Ohene Agyekum · University of Rhode Island · 2026</p>
+    </footer>
+
+</body>
+</html>
